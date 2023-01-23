@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Import Javascript</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div>
+                <h1 class="display-4">Belajar Axios</h1>
+            </div>
+            <div>
+                <button class="btn btn-primary" id="get">GET</button>
+                <button class="btn btn-secondary" id="show">SHOW</button>
+                <button class="btn btn-success" id="post">POST</button>
+                <button class="btn btn-danger" id="del">DELETE</button>
+                <button class="btn btn-warning" id="update">UPDATE</button>
+            </div>
+            <hr class="mt-4">
+        </div>
+        <div class="row">
+            <div id="out">
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import {get} from './get.js';
+        import {show} from './show.js';
+        import {post} from './post.js';
+        import {hapus} from './delete.js';
+        import {ubah} from './update.js';
+        
+        document.querySelector('#get').addEventListener('click', get);
+        document.querySelector('#show').addEventListener('click', show);
+        document.querySelector('#post').addEventListener('click', post);
+        document.querySelector('#del').addEventListener('click', hapus);
+        document.querySelector('#update').addEventListener('click', ubah);
+
+        // get();
+        // show();
+        // console.log(siswa);
+    </script>
+</body>
+</html>
